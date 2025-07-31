@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy 18th Birthday, Nashrah 💜</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #f2e6ff, #e0c9f5);
+      font-family: 'Georgia', serif;
+      overflow-x: hidden;
+      color: #4b004b;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-top: 60px;
+      color: #990099;
+    }
+
+    h2 {
+      font-weight: normal;
+      margin: 20px auto;
+      max-width: 800px;
+      font-size: 1.5em;
+      line-height: 1.6;
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 60px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      background-color: #b44dff;
+      color: white;
+      border: none;
+      padding: 18px 30px;
+      font-size: 1.2em;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      background-color: #9f38e0;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9em;
+      color: #6d2b8d;
+    }
+
+    /* Falling Red Hearts */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      transform: rotate(45deg);
+      animation: fall 8s infinite;
+      opacity: 0.8;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-50px) rotate(45deg);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 0.8;
+      }
+    }
+
+    /* Confetti */
+    .confetti {
+      position: absolute;
+      width: 6px;
+      height: 12px;
+      background: gold;
+      animation: confettiFall 6s infinite;
+      border-radius: 2px;
+    }
+
+    @keyframes confettiFall {
+      0% {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Happy 18th Birthday, Nashrah! 💜</h1>
+
+  <h2>
+    On this day, 18 years ago, the world became brighter — because *you* arrived.  
+    <br><br>
+    Today, I just want to say... every moment with you has been a chapter of happiness I’ll never forget.  
+    <br><br>
+    You deserve all the love, laughter, and light that this life can offer.  
+    <br><br>
+    💌 With all my heart,  
+    <br>
+    — Yours forever,  
+    <strong>Hamad</strong>
+  </h2>
+
+  <div class="btn-container">
+    <button class="btn" onclick="alert('🎁 A little surprise from Hamad: Every day spent with you is a gift. Today, that gift is wrapped in smiles and love!')">🎁 Open Your Surprise</button>
+    <button class="btn" onclick="alert('🎉 My Birthday Wish: May your 18th year be full of strength, joy, peace, and everything you’ve dreamed of, Nashrah!')">💌 Read My Wishes</button>
+  </div>
+
+  <footer>
+    &copy; 2025 With Endless Love — Hamad 💜
+  </footer>
+
+  <!-- Add hearts -->
+  <script>
+    for (let i = 0; i < 35; i++) {
+      let heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (5 + Math.random() * 4) + "s";
+      heart.style.top = "-" + (Math.random() * 100) + "px";
+      document.body.appendChild(heart);
+    }
+
+    // Add confetti
+    for (let i = 0; i < 25; i++) {
+      let confetti = document.createElement("div");
+      confetti.classList.add("confetti");
+      confetti.style.left = Math.random() * 100 + "vw";
+      confetti.style.animationDuration = (3 + Math.random() * 4) + "s";
+      confetti.style.backgroundColor = ['gold', 'hotpink', 'skyblue'][Math.floor(Math.random() * 3)];
+      confetti.style.top = "-" + (Math.random() * 100) + "px";
+      document.body.appendChild(confetti);
+    }
+  </script>
+
+</body>
+</html>
